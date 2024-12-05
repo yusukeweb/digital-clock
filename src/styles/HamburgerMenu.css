@@ -1,0 +1,156 @@
+.hamburger-menu {
+    position: relative;
+  }
+  
+  .hamburger-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -20%;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    transition: left 0.3s ease-in-out;
+    color: white;
+    font-weight: 700;
+    /* opacity: 0;
+    visibility: hidden; */
+  }
+  
+  .menu.open {
+    left: 0;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  /* ハンバーガーメニュー */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding:20px 40px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    height: 70px;
+  }
+
+  .menu-list {
+    padding-top: 100px;
+  }
+  .menu-list li a {
+    display: block;
+    padding: 2rem .5rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+  
+  }
+  .hamburger {
+    position: relative;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+  }
+  .hamburger-line {
+    width: 2rem;
+    height: 3px;
+    background-color: black;
+    position: relative;
+  }
+  .hamburger-line::before,
+  .hamburger-line::after {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all .5s;
+  }
+  .hamburger-line::before {
+    top: -12px;
+  }
+  .hamburger-line::after {
+    top: 12px;
+  }
+  
+ .hamburger-line.open{
+    background-color: transparent;
+  }
+  .hamburger-line.open::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .hamburger-line.open::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* 設定ボタン */
+#settings {
+    list-style-type: none;
+  }
+  #settings li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle-button {
+    /* margin: 400px; */
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 25px;
+      border-radius: 50px;
+      border: 3px solid #dddddd;
+      box-sizing: content-box;
+      cursor: pointer;
+      transition: border-color .4s;
+  }
+  
+  .toggle-button:has(:checked) {
+      border-color: teal;
+  }
+  
+  .toggle-button::after {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #dddddd;
+      content: '';
+      transition: left .4s;
+  }
+  
+  .toggle-button:has(:checked)::after {
+      left: 24px;
+      background-color: teal;
+  }
+  
+  .toggle-button input {
+      display: none;
+  }
