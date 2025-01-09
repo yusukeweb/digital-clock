@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+const Dayofweek = ["日", "月", "火", "水", "木", "金", "土"];
+
 const DisplayDate = () => {
     const [isShow, setIsShow] = useState(true);
 
